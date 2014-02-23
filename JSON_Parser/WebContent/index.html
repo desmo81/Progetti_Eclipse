@@ -8,23 +8,44 @@
 
 	<link type="text/css" rel="stylesheet" href="css/main.css" />
 	<link type="text/css" rel="stylesheet" href="css/body.css" />
+	<link type="text/css" rel="stylesheet" href="css/jquery.bxslider.css" />
+	<!--  link type="text/css" rel="stylesheet" href="css/style.css" / -->
 
 	<script type="text/javascript" src="jscript/jquery-latest.js"></script>
 	<script type="text/javascript" src="jscript/jquery-ui-latest.js"></script>
 	<script type="text/javascript" src="jscript/jquery.layout-latest.js"></script>
+	<!--  script type="text/javascript" src="jscript/jquery.bxslider.min.js"></script -->
+	<script type="text/javascript" src="jscript/jquery.bxslider.js"></script>
+	
 	<script type="text/javascript">
 
 	$(document).ready(function () {
 		$('#container').layout();
+		
+    	$('.slider1').bxSlider({
+	      slideWidth: 200,
+	      minSlides: 2,
+	      maxSlides: 3,
+	      slideMargin: 10
+	    });
+		
 	});
-
+	
 	</script>
 
 </head>
 <body>
 <div id="container">
 	<div class="pane ui-layout-center">
-		Centrale
+		
+		<div class="slider1">
+			  <div class="slide"><img src="images/FooBar1.gif"/></div>
+			  <div class="slide"><img src="images/FooBar2.gif"/></div>
+			  <div class="slide"><img src="images/FooBar3.gif"/></div>
+			  <div class="slide"><img src="images/FooBar4.gif"/></div>
+			  <div class="slide"><img src="images/FooBar5.gif"/></div>
+		</div>
+		
 	</div>
 	<div class="pane ui-layout-north">North</div>
 	<div class="pane ui-layout-south">South</div>
